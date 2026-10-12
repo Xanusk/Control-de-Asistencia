@@ -143,38 +143,25 @@
   </style>
 
   <!-- Firebase SDK (Modular v10) -->
- <!-- Firebase SDK (Modular v10) -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDyd-dcc31QYWjcj_Efo_AI5tLClz4KS8o",
-    authDomain: "control-de-asistencia-idiomas.firebaseapp.com",
-    databaseURL: "https://control-de-asistencia-idiomas-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "control-de-asistencia-idiomas",
-    storageBucket: "control-de-asistencia-idiomas.firebasestorage.app",
-    messagingSenderId: "964518265307",
-    appId: "1:964518265307:web:db00ce12552a5e8a0da7fe",
-    measurementId: "G-RJ5W8RGPE3"
-  };
+    const firebaseConfig = {
+      apiKey: "AIzaSyDyd-dcc3lQYWjcj_Efo_AI5tLClz4KS8o",
+      authDomain: "control-de-asistencia-idiomas.firebaseapp.com",
+      databaseURL: "https://control-de-asistencia-idiomas-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "control-de-asistencia-idiomas",
+      storageBucket: "control-de-asistencia-idiomas.firebasestorage.app",
+      messagingSenderId: "964518265307",
+      appId: "1:964518265307:web:db00ce12552a5e8a0da7fe",
+      measurementId: "G-RJ5W8RGPE3"
+    };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-  window.firebaseDB = { db, ref, set, onValue };
-
-  // Autenticación con tu usuario
-  // Autenticación con tu usuario
-  const auth = getAuth(app);
-  signInWithEmailAndPassword(auth, "xanusk@gmail.com", "TU_CONTRASEÑA_AQUÍ")
-    .then(() => {
-      alert("✅ Conectado con éxito a Firebase");
-    })
-    .catch((error) => {
-      alert("❌ Error de autenticación: " + error.code + " - " + error.message);
-    });
-</script>
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    window.firebaseDB = { db, ref, set, onValue };
+  </script>
 </head>
 <body>
 <div class="container">
