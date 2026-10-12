@@ -165,13 +165,14 @@
   window.firebaseDB = { db, ref, set, onValue };
 
   // Autenticación con tu usuario
+  // Autenticación con tu usuario
   const auth = getAuth(app);
-  signInWithEmailAndPassword(auth, "xanusk@gmail.com", "Soyanita_8325")
+  signInWithEmailAndPassword(auth, "xanusk@gmail.com", "TU_CONTRASEÑA_AQUÍ")
     .then(() => {
-      console.log("Conectado con éxito a Firebase");
+      alert("✅ Conectado con éxito a Firebase");
     })
     .catch((error) => {
-      console.error("Error al autenticar:", error.message);
+      alert("❌ Error de autenticación: " + error.code + " - " + error.message);
     });
 </script>
 </head>
